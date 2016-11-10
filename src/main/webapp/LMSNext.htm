@@ -1,0 +1,121 @@
+<HTML>
+<!--
+/*******************************************************************************
+**
+** Filename: LMSNext.htm
+**
+** File Description: Displays a "Next" button in upper left frame which
+** controls loading of next SCO.
+**
+** Author: ADL Technical Team
+**
+** Contract Number:
+** Company Name: CTC
+**
+** Module/Package Name:
+** Module/Package Description:
+**
+** Design Issues:
+**
+** Implementation Issues:
+** Known Problems:
+** Side Effects:
+**
+** References: ADL SCORM
+**
+/*******************************************************************************
+**
+** Concurrent Technologies Corporation (CTC) grants you ("Licensee") a non-
+** exclusive, royalty free, license to use, modify and redistribute this
+** software in source and binary code form, provided that i) this copyright
+** notice and license appear on all copies of the software; and ii) Licensee does
+** not utilize the software in a manner which is disparaging to CTC. 
+**
+** This software is provided "AS IS," without a warranty of any kind.  ALL
+** EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY
+** IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-
+** INFRINGEMENT, ARE HEREBY EXCLUDED.  CTC AND ITS LICENSORS SHALL NOT BE LIABLE
+** FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+** DISTRIBUTING THE SOFTWARE OR ITS DERIVATIVES.  IN NO EVENT WILL CTC  OR ITS
+** LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA, OR FOR DIRECT,
+** INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER
+** CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE USE OF
+** OR INABILITY TO USE SOFTWARE, EVEN IF CTC  HAS BEEN ADVISED OF THE POSSIBILITY
+** OF SUCH DAMAGES.
+**
+*******************************************************************************/
+-->
+<HEAD>
+<META http-equiv="expires" CONTENT="Tue, 20 Aug 1999 01:00:00 GMT">
+<META http-equiv="Pragma" CONTENT="no-cache">
+<TITLE>ADL Sample Run-Time Environment Version 1.2.2</TITLE>
+<SCRIPT  LANGUAGE=javascript>
+
+  function  nextSCO()
+//changeSCOContent()
+{
+
+   // This is the launch line for all SCOs...
+   // The LMSLesson servlet figures out which SCO (in sequence) to launch and
+   // serves it up into the LMS's content frame or child window - depending
+   // on the method that was used to launch the content in the first place.
+
+   var scoWinType = typeof(window.parent.frames[2].scoWindow);
+   var theDate = new Date();
+   var foo = theDate.getTime();
+   //var theURL = "lmslesson?&lessonid=00000&foo="+foo;
+   var theURL = "sequencingEngine.jsp";
+   //alert ("the URL is" +theURL);
+
+   if (scoWinType != "undefined" && scoWinType != "unknown")
+   {
+      if (window.parent.frames[2].scoWindow != null)
+      {
+         // there is a child content window so display the sco there.
+         window.parent.frames[2].scoWindow.document.location.href = theURL;
+      }
+      else
+      {
+         window.parent.frames[2].document.location.href = theURL;
+      }
+   }
+   else
+   {
+      window.parent.frames[2].document.location.href = theURL;
+      //  scoWindow is undefined which means that the content frame
+      //  does not contain the lesson menu at this time.
+   }
+   if ( document.layers != null )
+  {
+     swapLayers();
+  }
+  else if ( document.all != null )
+  {
+     window.document.forms[0].next.disabled = true;
+  }
+  else
+  {
+     //Neither IE nor Netscape is being used
+     alert("your browser may not be supported");
+  }
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+  <FORM>
+   <TABLE WIDTH="400" ALIGN="right">
+   <TR>
+   <TD>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</TD>
+  <td align="right"><INPUT type="button" align ="right" value="Next>" id="next" name="next"  language="javascript"
+                      onclick="return nextSCO();" DISABLED>&nbsp; <BR>
+
+</TD>
+</TR>
+
+</TABLE>
+</FORM>
+  
+</BODY>
+</HTML>

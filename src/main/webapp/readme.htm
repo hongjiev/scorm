@@ -1,0 +1,1089 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!------------------------------------------------------------
+Page name:  readme.htm
+Creation Date: 05/06/2004
+Purpose: SCORM Sample Run-Time Environment Version 1.2.2 Readme file
+Change History-
+   Change Number:
+   Date: MM/DD/YYYY
+   Author:
+   Comment:
+====================
+------------------------------------------------------------->
+<html>
+<head>
+<meta name="Keywords" content=""> <meta name="Description" content=""> 
+<title>Sample Run-Time Environment Version 1.2.2 Readme</title>
+<style>
+	/* Blue shade  Hexadecimal - 352889*/
+	BODY  {margin-left : 15; background-color : white; font-family : arial; font-size : 10pt;   background-repeat:repeat-y; }
+	BODY, .reset  {font-family : Arial;font-size : 10pt; margin-left: 10px}
+
+	TH  {color : #352889; font-family : arial; font-size : 18pt;}
+	/*this td is affecting the text on the page*/
+	TD  {color : #000000; font-family : arial; font-size : 10pt; }
+	/*this ul is affecting the bulleted text and bullet color, but not bullet size on the page*/
+	OL {font-weight: normal; color : #000000; font-family : arial; font-size : 10pt; margin-bottom: 0;}
+	UL {font-weight: normal; color : #000000; font-family : arial; font-size : 10pt; margin-bottom: 0;}
+	/*this li is affecting the bullets size on the page*/
+	LI  {font-weight: normal; color : #000000; 
+		font-weight: normal;
+		font-size : 10pt;}
+	A  {color : #352889; font-family : Arial, helvetica; font-size : 10pt; font-weight : bold;}
+	A:visited  {color : #7E2C7E;}/* visited link*/
+	A:link  {color : #352889;}/* unvisited link*/
+	A:active  {color : #7E2C7E;}/* active link*/
+   STRONG {font-weight: bold;}
+   P {font-family : arial; font-size : 10pt;}
+	
+	.MT {color : #352889; font-family : arial; font-size : 18pt; font-weight : bold;}/* Main Title on Page */
+	.ST {color : #352889; font-family : arial; font-size : 12pt; font-weight : bold;}/* Sub-Title on Page */
+	
+</style>
+</head>
+
+
+<body alink="" link="" vlink="" background="../../images/globeback.gif" >
+<a name="top"></a>
+<table width="550" cellspacing="2" cellpadding="2" border="0">
+  <!-- CLASS="MT" Formatting for Main Title text CLASS="ST" Formatting for Sub-Title text -->
+      <th align="left" colspan="2" class="MT">
+         Sharable Content Object Reference Model <br>(SCORM &reg;) Version 1.2
+      </th>
+  
+   <tr> 
+      <td valign="TOP" colspan="2" class="ST"> 
+         Sample Run-Time Environment Version 1.2.2
+      </td>
+   </tr>
+   <!--- End Additional Info Row --->
+   <!--- <TR CLASS="trSubTitle">
+      <TD CLASS="tdSubTitle">
+         Last updated: XX/XX/XXXX 
+      </TD>
+   </TR> --->
+   <tr class="trSubTitle">
+      <td class="tdSubTitle">
+         Please direct all questions regarding the following to the ADL Help &amp; Info Center,<br>
+         located at <a href="http://www.adlnet.org/" target="_blank">www.adlnet.org</a>
+      </td>
+   </tr>
+   <!--- End Additional Info Row --->
+   <!--- Begin Separator Row --->
+   <tr>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <!--- End Separator Row --->
+   <!--- Begin Heading Row --->
+   <tr>
+      <td align="left" bgcolor="dedcec">
+         <b>Table of Contents</b>
+      </td>
+   </tr>
+   <!--- End Heading Row --->
+   <!--- Begin TOC Row --->
+   <tr>
+      <td>
+         <!--- Begin TOC Table --->
+         <table>
+            <!--- Begin TOC Major Heading Row --->
+            <tr>
+               <td width="20" align="left"> <!--- Roman Numeral for Section --->
+               <strong>I.</strong>
+               </td>
+               <td align="left" colspan=2> <!--- Title of Section --->
+               <a href="#changes">Revisions</a>
+               </td>
+            </tr>
+            <!--- End TOC Major Heading Row --->
+            <!--- Begin TOC Major Heading Row --->
+            <tr>
+               <td width="20" align="left"> <!--- Roman Numeral for Section --->
+               <strong>II.</strong>
+               </td>
+               <td align="left" colspan=2> <!--- Title of Section --->
+               <a href="#introduction">Introduction</a>
+               </td>
+            </tr>
+            <!--- End TOC Major Heading Row --->
+            <!--- Begin TOC Major Heading Row --->
+
+            <tr>
+               <td width="20" align="left"> <!--- Roman Numeral for Section --->
+               <strong>III.</strong>
+               </td>
+               <td align="left" colspan=2> <!--- Title of Section --->
+               <a href="#installation">Installation Instructions</a>
+               </td>
+            </tr>
+            <!--- End TOC Major Heading Row --->
+            <!--- Begin TOC Major Heading Row --->
+            <tr>
+               <td width="20" align="left"> <!--- Roman Numeral for Section --->
+               <strong>IV.</strong>
+               </td>
+               <td align="left" colspan=2> <!--- Title of Section --->
+               <a href="#running">Running the Sample RTE</a>
+               </td>
+            </tr>
+            <!--- End TOC Major Heading Row --->
+            <!--- Begin TOC Major Heading Row --->
+            <tr>
+               <td width="20" align="left"> <!--- Roman Numeral for Section --->
+               <strong>V.</strong>
+               </td>
+               <td align="left" colspan=2> <!--- Title of Section --->
+               <a href="#additional">Additional Information</a>
+               </td>
+            </tr>
+            <!--- End TOC Major Heading Row --->
+         </table>
+         <!--- End TOC Table --->
+      </td>
+   </tr>
+   <!--- End TOC Row --->
+   <!--- Begin Separator Row --->
+   <tr>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   
+   <!--- End Separator Row --->        
+   <!--- Begin Major Heading Row --->
+   <tr>
+      <td align="left" bgcolor="dedcec">
+         <a name="changes"></a><strong>I.  Revisions</strong>
+      </td>
+   </tr>
+   <!--- End Major Heading Row --->
+   <!--- Begin Text Row --->   
+   <tr> 
+      <td valign="TOP">
+      
+         <p>
+         <b>Changes from Sample RTE Version 1.2.1 to Version 1.2.2</b>
+         <ol>
+         <li>The interactions data model element children changed from 
+             "id,objective_ids,time,type,correct_responses,weighting,student_response,result,latency" to
+             "id,objectives,time,type,correct_responses,weighting,student_response,result,latency".
+         </li>  
+         </ol>
+         </p>
+         
+         <p>
+         <b>Changes from Sample RTE Version 1.2 to Version 1.2.1</b>
+         <ol>
+         <li>The return error code for LMSSetValue calls on list elements that are non-sequential has been changed to 201.</li>  
+         <li>Improper error codes were being returned for errors resulting from the values for certain data model elements 
+         such as cmi.student_preference being out of bounds.
+         These error codes have also been changed.  
+         </li>
+         </ol>
+         </p>
+         
+         <p><b>Changes from Sample RTE Version 1.1<b></p>
+                  <ol style="margin-bottom: 0;">
+            <li>This version has been modified to accept content aggregation packages conformant to the SCORM Version 1.2
+                Content Packaging Application Profiles.  These packages can be imported into the Sample RTE and then are
+                available for registration. It is strongly recommended that course Package Interchange Files (PIF)
+                are tested by the <i>SCORM Version 1.2 Conformance Test Suite Version 1.2.2</i> before they are
+                imported into the Sample RTE.  The RTE does not validate for conformance and assumes that packages
+                have already been verified as conformant to the Content Packaging Application Profiles Content
+                Aggregation Package Specification located in the SCORM Version 1.2.
+                (See <a href="http://www.adlnet.org" target="_blank">http://www.adlnet.org</a>
+                for details on the Application Profiles.)
+            </li> 
+            <li>This version has been modified to allow more than one user to be registered with the system.  Administrators
+                are responsible for creating new user accounts.
+            </li>
+            <li>Users can now register for courses that have been imported into the Sample RTE.</li>  
+            <li>Users who have registered for courses can launch and execute the courses for which they are registered.       
+            </li>
+            <li>This version has been modified to reflect the changes introduced in the SCORM Version 1.2. To view a 
+            summary of changes in the SCORM Version 1.2 look at the list of changes in the SCORM specification</li> 
+   
+            <li>The Sample RTE now ships with Jakarta-Tomcat-5.0.16. Tomcat is used as the Servlet Engine and Web Server</li>     
+         </ol>
+                        
+            </p> 
+            <p align="center"><a href="#top">Back to Top</a></p>
+   
+     </td>
+  </tr>
+  <!--- End Text Row --->
+     <!--- End Major Heading Row --->
+   <!--- Begin Text Row --->
+  
+  <!--- Begin Separator Row --->
+   <tr>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <!--- End Separator Row --->
+   <!--- Begin Major Heading Row --->
+   <tr>
+      <td align="left" bgcolor="dedcec">
+         <a name="introduction"></a><strong>II. Introduction</strong>
+      </td>
+   </tr>
+   <!--- End Major Heading Row --->
+   <!--- Begin Text Row --->
+   <tr> 
+      <td valign="TOP"> 
+         <p>
+         Welcome to the Advanced Distributed Learning (ADL) SCORM Version 1.2 Sample Run-Time Environment (RTE) Version 1.2.2. This 
+         Sample RTE is intended to provide an example implementation of the concepts described in 
+         the SCORM. Specifically, this sample was developed in order to provide an illustration 
+         of Content Packaging and the SCORM Run-Time Environment. The main focus is on the Run-Time Environment communication between the RTE 
+         and Sharable Content Objects (SCOs) using the API mechanism described in the SCORM.
+         Robust exception and error handling has not been included in this sample code.
+         </p>
+          
+         <p>
+         There are a number of possible Web-enabled implementations. This version of the Sample RTE 
+         was implemented as a Web-based client/server application using HTML, JavaScript, JavaServer Pages (JSP), 
+         Java Applets, Java Servlets, and Java Applications (See Section III of this readme for details). 
+         Specifically, this sample code consists of the following components: 
+         </p>
+         <ol style="margin-bottom: 0;">
+            <li>Run-Time Environment Server Component: Implemented using Java Applications and Java Servlets.</li> 
+            <li>Run-Time Environment Client Component: Implemented using JSP, Java Applets, HTML, and JavaScript.</li> 
+            <li>Sample Course: Implemented using HTML and JavaScript.</li>
+         </ol>   
+         <br /><br />       
+         <strong><em>Sample Run-Time Environment Server Component </em></strong>
+         </p>
+         <p>
+         The Run-Time Environment server component is implemented using Java Servlets and HTML. The Servlets 
+         respond to requests from the Run-Time Environment client component and are responsible for data model 
+         persistence as well as serving the student course menu, the course lesson menu and launching the 
+         selected lesson. 
+         </p>
+         <p>
+         The server components are described below: 
+         </p>
+         <p>
+         <em>LMSManifestHandler.java</em><br>
+         This Java class is responsible for
+         accessing information in the imsmanifest.xml file, and storing it in the Sample RTE
+         database.
+         </p>
+         <p>
+         <em>LMSPackageHandler.java</em><br>
+         Provides a zip utility to access and extract the imsmanifest.xml file from a Content Package
+         represented as a Package Interchange File (PIF).  
+         </p>
+         <p>
+         <em>LMSCMIServlet.java</em><br>
+         Provides a mechanism for communication between the Run-Time Environment server component and SCOs. 
+         This particular implementation is specifically for the data model that is described in the SCORM. Other 
+         modules could be created to handle other data models as they come into existence. The "LMSCMIServlet" 
+         sends and receives serialized data model objects via HTTP to and from the Run-Time Environment client 
+         component (see below). Data persistence is handled by Java's built-in serialization mechanism using a 
+         file on the local file system.
+         </p>
+
+         <p>
+         <strong><em>Sample Run-Time Environment Client Component (Java Files)</em></strong> 
+         </p>
+         <p>
+         The Run-Time Environment client side component consists of a sample user interface implemented in HTML 
+         and JavaScript and the Run-Time Environment API Adapter implemented as a Java Applet. The Applet is 
+         downloaded to the client when the user accesses the Run-Time Environment main start page through a Web 
+         browser. The API Adapter Applet provides the communication to the Run-Time Environment server component 
+         for data model element persistence. The SCOs make calls to the API functions from JavaScript. 
+         (See the description of the sample course below for a description of how the RTE API function calls are 
+         made from the SCOs). The SCOs do not need to know about any of the RTE implementation details. 
+         </p>
+         <p>
+         The Java client components are described below:
+         </p>
+         <p>
+         <em>APIAdapterApplet.java</em><br> 
+         This contains the full implementation of the API Adapter that is described in The SCORM.  
+         This file implements the Run-Time Environment API functions (i.e. LMSInitialize(), LMSFinish(), etc.).
+         </p>
+         <p>
+         <em>LMSErrorManager.java</em><br> 
+         This contains the LMSErrorManager class, which encapsulates the error handling capabilities specified for 
+         the Run-Time Environment API. It maintains the most recent error code and the mapping of error codes to 
+         the error text and diagnostic information.
+         </p>
+         <p>
+         <em>ServletProxy.java</em><br> 
+         This contains the ServletProxy class that encapsulates the communication between the Run-Time 
+         Environment client component API Adapter Applet and the Run-Time Environment server component.
+         </p>
+         <p>
+         <em>ServletWriter.java</em><br> 
+         This contains the ServletWriter class that provides the low level input and output serialized object-streaming 
+         capability that is used by ServletProxy to actually communicate with the Servlets via HTTP. 
+         This class was downloaded from <a href="http://www.javasoft.com/" target="_blank">www.javasoft.com</a>.
+         </p>
+         <p>
+         <strong>Sample Run-Time Environment Client Component (Web Files)</strong> 
+         is divided into the following main conceptual modules: 
+         </p>
+         <p>
+         <em>User Interfaces</em><br>
+         The interfaces provide the ability to login, logout, register and unregister for courses,
+         view courses, and gain access to online help built into the Sample RTE.  The following files
+         comprise the user interfaces:
+         <table>
+         <tr>
+            <td>
+               <ul>         
+                  <li>courseRegister.jsp</li>                
+                  <li>LMSLogin.jsp</li>
+                  <li>LMSMenu.jsp</li>
+                  <li>LMSLogin.htm</li>
+                  <li>LMSLogin2.htm</li>
+                  <li>LMSMain.htm</li>
+                  <li>LMSNext.htm</li>
+                  <li>LMSStart.htm</li>
+               </ul>
+            </td>
+            <td>
+               <ul>
+                  <li>importHelp.htm</li>
+                  <li>launchCourseHelp.htm</li>
+                  <li>newUserHelp.htm</li>
+                  <li>gotoMenu.jsp</li>
+                  <li>logout.jsp</li>
+                  <li>processChangePwd.jsp</li>
+                  <li>processCourseReg.jsp</li>
+                  <li>viewCourses.jsp</li>
+                  </ul>
+            </td>
+            <td>
+               <ul>
+                  <li>courseComplete.jsp</li>
+                  <li>changePwd.jsp</li>
+                  <li>changePwd2.htm</li>
+                  <li>changePwdHelp.htm</li>
+                  <li>courseRegisterHelp.htm</li>
+                  <li>confirmImport.jsp</li>
+                  <li>readme.htm</li>
+               
+               </ul>
+            </td>
+         </tr>
+         </table>      
+         </p>
+         <p>
+         <em>Administration</em><br>
+         The administration files provide the ability to import courses, manage courses,
+         and manage users. The following files comprise the administration module:
+         <table>
+         <tr>
+            <td>
+               <ul>
+                  <li>clearDatabase.jsp</li>
+                  <li>deleteCourse.jsp</li>
+                  <li>deleteUser.jsp</li>
+               </ul>
+            </td>
+            <td>
+               <ul>
+                  
+                  <li>processDeleteCourse.jsp</li>
+                  <li>processDeleteUser.jsp</li>
+                  <li>processNewUser.jsp</li>
+               </ul>
+            </td>
+            <td>
+               <ul>
+                  <li>importCourse.jsp</li>
+                  <li>newUser.jsp</li>
+               </ul>
+            </td>
+         </tr>
+         </table>
+         </p>   
+                                    
+         <p>
+         <em>Functional</em><br> 
+         These files provide the API Adapter, allow sequencing and provide navigation controls.  The
+         following files comprise the functional module:
+         </p>
+         <p>
+         <ul>
+         <li>
+            <em>LMSFrame.jsp</em><br>
+            This page contains the API Adapter designed as an Applet. The API Adapter has no visual display 
+            elements and is therefore invisible to the user. Note that the API Adapter object is 
+            exposed to SCOs via the LMSMain.htm page. The SCOs communicate with the Run-Time 
+            Environment through this API. This page also contains the Run-Time Environment login and 
+            logout buttons.
+         </li>
+         <li>
+            <em>code.jsp</em><br>
+            This file is used to setup the look and feel of the menu.  JavaServer Pages (JSP) is used to dynamically
+            create the menu structure based on the imsmanifest.xml item elements.
+         </li>
+         <li>
+            <em>LMSCourseImport.jsp</em><br>
+            This file is responsible for moving the PIF to the server, extracting the files,
+            and moving the files under the web root.  This file includes the LMSManifestHandler
+            and the LMSPackageHandler.  See the server component for details.
+         </li>
+         <li>
+            <em>importUtil.jsp</em><br>
+            This file contains importing utilities used by LMSCourseImport.jsp.
+         </li>
+         <li>
+            <em>pleaseWait.jsp</em><br>
+            This file is used to set up client-side variables before the next course 
+            item is presented
+         </li>
+         <li>
+            <em>sequencingEngine.jsp</em><br>
+            This file is responsible for the sequencing of a course.  At this time, sequencing
+            occurs as a preordered transversal of items defined in the manifest organization.  
+            There is currently an investigation
+            into sequencing issues.  The results will find their way into a future version 
+            of The SCORM. <em>This sequencing and navigation implementation is specific to 
+            this RTE and in no way represents a SCORM sequencing model.</em><br>
+            <em>At this time, sequencing occurs as follows:</em>
+            <ul>
+               <li>A NEXT REQUEST (The user clicks the "next" button on the top RTE frame):<br>
+                   This launches the next logical item from the manifest's organization structure.  
+                </li>
+                <li>A PREVIOUS REQUEST (The user clicks the "previous" button on the top RTE frame):<br>
+                   This launches the previous logical item from the manifest's organization structure.  
+                </li>
+                <li>A MENU REQUEST (The user clicks a menu option in the left RTE frame):<br>
+                   This serves the resource that is associated with the item that the user
+                   selected.
+                </li>
+                <li>FIRST LAUNCH OF COURSE SESSION (The user selects a course to view):<br>
+                   This launches the first item from the manifest's organization structure 
+                   that is not in a completed state.
+                </li>
+             </ul>
+             <p><em>      
+                At this time prerequisites and mastery do not factor into sequencing decisions.
+             </em></p>
+             <p><em>
+               At this time, the controls present during a course are selected by an administrator
+               during import.  The control modes available are "flow" (Previous and Next buttons are 
+               presented) and "choice" (a menu tree representing the manifest's organization structure 
+               is presented).
+            </p></em>
+         </li>        
+         </ul>
+         </p>
+         
+         <p>
+         <strong><em>SCORM Run-Time Environment Data Model</em></strong> 
+         </p>
+         <p>
+         The SCORM Run-Time Environment Data Model is derived from the AICC CMI Data Model and is the only data model 
+         that is currently used to communicate from the SCOs to the Run-Time Environment. At this time all of the 
+         data elements are implemented in this Sample RTE. Several classes are included to represent the data elements of 
+         the data model. These classes are used by both the Servlets and the API Adapter Applet. 
+         </p>
+         <p>
+         The source for these classes is as follows: 
+         </p>
+         <p>
+         <em>CMICore.java</em><br>
+         Contains the implementation of the cmi.core data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMISuspendData.java</em><br> 
+         Contains the implementation of the cmi.suspend_data data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMILaunchData.java</em><br>
+         Contains the implementation of the cmi.launch_data data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMIComments.java</em><br> 
+         Contains the implementation of the cmi.comments data model elements needed for the SCO to LMS and communication.
+         </p>
+         <p>
+         <em>CMICommentsFromLms.java</em><br> 
+         Contains the implementation of the cmi.comments_from_lms data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMIObjectives.java / CMIObjectiveData.java</em><br> 
+         Contains the implementation of the cmi.objectives data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMIInteractions.java / CMIInteractionData.java</em><br> 
+         Contains the implementation of the cmi.interactions data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMIStudentData.java</em><br> 
+         Contains the implementation of the cmi.student_data data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <em>CMIPreferences.java</em><br>
+         Contains the implementation of the cmi.student_preference data model elements needed for the SCO to LMS communication.
+         </p>
+         <p>
+         <strong>Supporting Classes</strong> - used by the SCORM Run-Time Environment Data Model Classes: 
+         </p>
+         <p>
+         <em>CMIScore.java</em><br>
+         Contains an implementation of the Score element used by the data model.
+         </p>
+         <p>
+         <em>Element.java</em><br>
+         Class used to represent the base element (i.e. cmi.core.student_id).
+         </p>
+         <p>
+         <em>CMICategory.java</em><br> 
+         Class used to encapsulate commonality between the CMI Categories.
+         </p>
+         <p>
+         <em>CMIRequest.java</em><br>
+         Class used to represent a Request from a SCO (i.e. LMSGetValue(cmi.core.student_id) ).
+         </p>
+         <p>
+         <em>CMITime.java</em><br> 
+         Contains the implementation of the CMITime data type.
+         </p>
+         <p>
+         <em>DataModelValidator.java</em><br> 
+         Contains the implementation of a class that parses and validates LMSSetValue and LMSGetValue requests.
+         </p>
+         <p>
+         <em>DataModelInterface.java</em><br> 
+         Class that contains the implementation of the interface between the RTE API Adapter and the rest of the data model implementation.
+         </p>
+         <p>
+         <em>SCODataManager.java</em><br> 
+         Class that manages the data model elements for a single Sharable Content Object.
+         </p>
+         <p>
+         <em>DMErrorManager.java</em><br>
+         Contains the implementation of a Data Model Error Manager. This class manages error state related specifically to data model errors.
+         </p>
+         <p>
+         <strong><em>Sample Run-Time Environment Debug Indicator</em></strong> 
+         </p>
+         <p>
+         The DebugIndicator.java is a class that contains a static attribute that is used to indicate to other Java classes 
+         if Debug is turned on. If debug is turned on, then debug statements will be displayed. Debug information from the 
+         Run-Time Environment server side will be displayed in the Web server console window. Debug information from the 
+         Run-Time Environment client side API Adapter will be printed to the Java Runtime Environment (JRE 1.4.2_02 recommended) Java 
+         Console if running in Microsoft Internet Explorer, or to the Netscape Java Console if running in Netscape Navigator. 
+         The DebugIndicator can be set to on to present debug information in the consoles (this may slow down the Sample 
+         Run-Time Environment). However, this requires recompilation of the source code. 
+         </p>
+
+         <p>
+         <!-- ****************************************
+         **   Sample Course
+         **********************************************-->
+         <strong><em>RTE Sample Maritime Navigation Course</em></strong> 
+         </p>
+         <p>
+         The course provided with the Sample Run-Time Environment contains one lesson.  
+         It is designed as a simple "page turner" lesson consisting of seven SCOs. 
+         <b>The course is not meant to serve as an example of instructionally sound learning content, 
+         but rather as an example of how to communicate data between the Run-Time Environment and the 
+         SCOs using the API.</b> 
+         </p>
+         <p>
+         The lesson implementation makes use of two JavaScript "include" files called APIWrapper.js 
+         and SCOFunctions.js. 
+         The APIWrapper.js file contains a set of "API wrapper" functions that encapsulate the 
+         functionality that a SCO might 
+         use to find and communicate with the LMS Run-Time Environment via the API. The 
+         SCOFunctions.js file contains JavaScript 
+         navigation functions used by all of the SCO HTML pages. It is included at run-time in 
+         each of the SCO HTML pages. 
+         </p>
+         <p>
+         The API wrapper does not implement the API functions, but rather encapsulates the logic needed to: 
+         </p>
+            <ol style="margin-bottom: 0;">
+               <li>Find the API in the LMS client framework</li> 
+               <li>Call the desired API function</li> 
+               <li>Handle errors that might be generated by the call to the API function.</li> 
+            </ol>
+         
+         <p>
+         The SCOs that comprise the HTML implementation of Lesson 01 consist 
+         of the following files: 
+         </p>
+            <ol style="margin-bottom: 0;">
+               <li>scoXX.htm</li>
+            </ol>
+           <br>
+         <strong>Note:</strong> The naming of the above files has adopted the following style: 
+         SCO stands for Sharable 
+         Content Object and XX stands for a number corresponding to the order in which the items 
+         making the lesson are ordered. This number ranges from 01 through 07. 
+         </p>
+         
+         <p>Each SCO that is launched in the course either has an assessment or a review question
+            at the end.  In order to get a cmi.core.lesson_status set to a completed state (completed or
+            passed), you must experience the review questions.  If the SCO is unloaded before completion
+            the status will remain incomplete.
+         </p>
+         <p>
+           The example Maritime Navigation course PIF file is located in the Sample RTE installation directory
+           and is called "ADL_Maritime_Navigation.zip".  To run this course it must be imported into the
+           Sample RTE and the user must register for it.
+         </p>
+         
+         <p align="center"><a href="#top">Back to Top</a></p>
+     </td>
+  </tr>
+   <!--- End Separator Row --->
+  <!--- Begin Major Heading Row --->
+   <tr>
+      <td align="left" bgcolor="dedcec">
+         <a name="installation"></a><strong>III. Installation Instructions</strong>
+      </td>
+   </tr>
+   <!--- End Major Heading Row --->
+   <!--- Begin Text Row --->
+   <tr> 
+      <td valign="TOP"> 
+         <p>
+         It is recommended that you read through all of the installation instructions prior to beginning installation. 
+         </p>
+         <p>
+         <strong><em>Prerequisites</em></strong>
+         </p>
+         <p>
+         <strong>Sun Java 2 SDK Standard Edition 1.4.2_02</strong>
+         <br>
+         The Sample RTE is built using Sun's Java 2 SDK Standard Edition Version 1.4.2_02, including the 
+         Java 2 Runtime Environment, Standard Edition Version 1.4.2_02. In addition, when running the Sample RTE in 
+         Microsoft Internet Explorer, the Java 2 Runtime Environment, Standard Edition 1.4.2_02 is used 
+         to provide the Java Virtual Machine (JVM) instead of relying on the Microsoft JVM. 
+         The Apache Jakarta-Tomcat Servlet Container and Web server that is included with the Sample RTE also requires the 
+         Java 2 SDK, so it is imperative that it be installed prior to running the RTE.
+         </p>
+         <p>
+         Notes: 
+            <ul>   
+               <li>
+                  If you install the Sample RTE on one machine and intend to access it from another machine using Microsoft 
+                  Internet Explorer, the Sun Java 2 Runtime Environment, Standard Edition 1.4.2_02 must be installed on both machines.
+               </li>
+               <li>
+                  <b>The Sample RTE requires the full Java 2 Software Development Kit (SDK).  Alone, the Java 2 Run-Time Environment 
+                     (JRE) is NOT sufficient.
+                   </b>
+               </li>
+            </ul> 
+         </p>
+         <p>
+         The Sun Java 2 SDK Standard Edition is freely available at
+         <a href="http://java.sun.com/j2se/1.4.2/download.html" target="_blank">
+         http://java.sun.com/j2se/1.4.2/download.html</a>. 
+         <b>It must be downloaded and installed prior to running the SCORM 2004 Sample RTE Version 1.2.2.</b> 
+         </p>
+         
+         <p>
+         After installing the Java 2 SDK Standard Edition 1.4.2_02, you must do the following: 
+         </p>
+            <ol style="margin-bottom: 0;">
+               <li>Add the full path of the SDK bin directory (where the java.exe is located) 
+                   to the PATH environment variable (e.g. C:\j2sdk1.4.2_02\bin). 
+                  <ul style="margin-bottom: 0;">
+                     <li>For Windows 2000 and XP: Right click on "My Computer", select "Properties", select the 
+                     "Advanced" tab and then click on "Environment Variables". Add the SDK 1.4.2_02 bin directory 
+                     to the Path by adding a semicolon followed by the bin directory.
+                     </li> 
+                     <li>For Windows NT: Select Start -> Control Panel. Select System, select Environment, and 
+                     look for "Path" in the User Variables and System Variables. Add the SDK 1.4.2_02 bin directory 
+                     to the Path by adding a semicolon followed by the bin directory.
+                     </li> 
+                     <li>For Window 98: Open and edit the AUTOEXEC.BAT file and add or change the PATH statement. To 
+                     do so, click Start-> Run and enter Sysedit. Add the SDK 1.4.2_02 bin directory to the Path.  This
+                     change requires a reboot to be effective.</li> 
+                  </ul>
+               </li>
+               <li>Set a JAVA_HOME environment variable to the SDK 1.4.2_02 root directory (e.g. C:\j2sdk1.4.2_02)
+                  <ul style="margin-bottom: 0;">
+                     <li>For Windows 2000 and XP: Right click on "My Computer", select "Properties", select the 
+                     "Advanced" tab and then click on "Environment Variables". Add a JAVA_HOME entry in the User 
+                     or System Variables that points to the location where the SDK 1.4.2_02 was installed.
+                     </li> 
+                     <li>For Windows NT: Select Start -> Control Panel. Select System, select Environment. Add a 
+                     JAVA_HOME entry in the User or System Variables that points to the location where the 
+                     SDK 1.4.2_02 was installed.
+                     </li> 
+                     <li>For Window 98: Open and edit the AUTOEXEC.BAT file and add or change the PATH statement. 
+                     To do so, click Start-> Run and enter Sysedit. Add the line "SET JAVA_HOME=" ending with the 
+                     path pointing to the location where the SDK 1.4.2_02 was installed.  This
+                     change requires a reboot to be effective.</li> 
+                  </ul>
+               </li>
+            </ol>
+          
+                
+         <p>
+         <strong><em>Constraints</em></strong> 
+         </p>         
+         <p>
+         The Sample Run-Time Environment has been tested on Microsoft Windows 2000 Professional and
+         Windows XP Professional, both on the Intel Pentium PC platform with Internet Explorer 5.5 and 6.0. 
+         It was not tested with any other browsers on any other platforms. 
+         </p>         
+         <p>
+         <strong><em>Installation</em></strong> 
+         </p>         
+         <p>
+         <strong>
+         Installation of the Sample RTE is to be done only after installing the Sun Java 2 SDK Standard Edition 
+         1.4.2_02.
+         </strong>  
+         </p>         
+         <p>
+         TO INSTALL: Click on the Sample RTE self extracting executable file and follow the installation instructions
+         on the screen.
+         </p>         
+                 
+         <p>
+         NOTE: The jakarta-tomcat-5.0.16 Servlet Engine and Web server is pre-configured to run on port 8080.  
+         </p>         
+         <p>
+         This completes the installation of the Sample RTE. 
+         </p>
+         
+         <p align="center"><a href="#top">Back to Top</a></p>
+     </td>
+  </tr>
+  <!--- End Text Row --->
+  <!--- Begin Separator Row --->
+   <tr>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <!--- End Separator Row --->
+  <!--- Begin Major Heading Row --->
+   <tr>
+      <td align="left" bgcolor="dedcec">
+         <a name="running"></a><strong>IV. Running the Sample RTE</strong>
+      </td>
+   </tr>
+   <!--- End Major Heading Row --->
+   <!--- Begin Text Row --->
+   <tr> 
+      <td valign="TOP"> 
+         <p>
+         The instructions provided are for running the Sample RTE on a Windows platform.  This is the only platform 
+         that the software has been tested on and is the only platform that instructions are provided for at this time. 
+         </p>         
+         <p>
+         <strong><em>To Run the RTE:</em></strong>
+         </p>         
+         <p> 
+         First you need to start the jakarta-tomcat-5.0.16 that is provided with this installation.  To do this:
+         <ul>
+            <li>Click on the Start Menu -> Programs -> ADL -> SampleRTE1.2.2 -> Startup or click   
+            on the startup icon on your desktop.  You will see a command 
+            prompt window open.  This window will remain open until you stop the server.<br />
+            </li>
+            <li>
+            Next click on the Start Menu -> Programs -> ADL -> SampleRTE1.2.2 -> SampleRTE1.2.2 or click on
+            the SampleRTE1.2.2 shortcut on your desktop.
+            This will launch the RTE Main page.  The first time that you visit this page you
+            will need to login with username: "admin", password: "admin".  (Be sure that Microsoft
+            Internet Explorer is your default browser.)
+            </li> 
+        </ul>    
+        
+        <p>
+           Online help pages are available once the Sample RTE is started.  "Help" links appear at
+           the bottom of each page.
+        </p>    
+        <p>
+          To stop the jakarta-tomcat-5.0.16 server click on the Start Menu -> Programs -> ADL -> 
+          SampleRTE1.2.2 -> shutdown or click on the shutdown shortcut on your desktop.
+        </p>
+        <p align="center"><a href="#top">Back to Top</a></p>
+     </td>
+  </tr>
+  <!--- End Text Row --->
+  <!--- Begin Separator Row --->
+   <tr>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <!--- End Separator Row --->
+  <!--- Begin Major Heading Row --->
+   <tr>
+      <td align="left" bgcolor="dedcec">
+         <a name="additional"></a><strong>V. Additional Information</strong>
+      </td>
+   </tr>
+   <!--- End Major Heading Row --->
+   <!--- Begin Text Row --->
+   <tr> 
+      <td valign="TOP"> 
+
+         <p>
+         <strong><em>Sequencing and Navigation</em></strong> 
+         </p>
+         <p>
+            Navigation controls are included in the Sample RTE to allow navigation through content.  
+            At this time the available controls are:
+            <ul>
+               <li>
+               <i><strong><em>flow:</em></strong></i> Previous and Next Buttons are presented on the top RTE frame.  
+               <br /><br />
+               A <i>Next</i> Request launches the SCO or asset that is referenced by the  next sequential 
+               item in the imsmanifest.xml file.<br />
+               A <i>Previous</i> Request launches the SCO or asset that is referenced by the previous
+               sequential item in the imsmanifest.xml file.
+               </li>
+            </ul>  
+            <ul> 
+               <li>
+               <i><strong><em>choice:</em></strong></i>  A menu is presented in the left RTE frame. 
+               </li>
+            </ul>
+         </p>       
+         <p>
+         On first launch of a course, the "cmi.core.lesson_status" of each SCO is checked for 
+         completion.  Completion is determined by a value of "completed", "passed", or "failed".
+         The first sequential item that is not completed is launched. (NOTE: To reset a
+         learners status in a course, unregister for the course, and then re-register.  <i>See
+         the online RTE help for details</i>.)  When all items are completed, the course becomes
+         unavailable.
+         </p>
+           
+         
+         <p>
+         NOTE: The control type for a course is determined on import by the user.  See the online
+         RTE Help for details.
+         </o>
+         
+         <p>
+         <strong><em>Known Issues</em></strong> 
+         </p>
+            <ol style="margin-bottom: 0;">
+               <li>
+               Occasionally the top and/or left RTE frame return an "Internal Server Error" when the RTE is first 
+               launched.  Simply close the browser window and re-launch the RTE to alleviate. 
+               </li>
+               <li>
+               If a package manifest contains references to external SCOs, a cross-domain JavaScript security error
+               will occur.  This may prevent communication between the SCOs and the RTE provided
+               API.
+               </li>  
+               <li>The "Clear Database" option will remove all courses, course items, and course records from
+                   the internal RTE database.  The actual files must be removed manually from:<br />
+                   &lt;webRoot&gt;\webapps\adl\CourseImports\*.
+               </li>
+               <li>The Microsoft Internet Explorer Browser must be set to check for a new page every
+               visit to the page.  To configure the browswer:
+                  <ul>
+                     <li>Open a Microsoft Internet Explorer Browser</li>
+                     <li>Click on "Tools" -> "Internet Options"</li>
+                     <li>On the "General" tab, "temporary internet files" sub-section, click "Settings"</li>
+                     <li>Ensure that the "Every visit to the page" radio button is selected</li>
+                     <li>Click "OK" Twice</li>
+                  </ul>
+               </li>
+               <li>If you intend to build the RTE and the installation directory of the Sample RTE contains spaces in the path, you will
+                   need to edit the ADL_SRTE122_HOME  variable and use the XXXXXX~1 notation for any directories with spaces.
+                   This is due to the batch file that builds the Sample RTE.  For example "Program Files" can be represented in the variable path as
+                   "PROGRA~1".
+                </li>
+                <li>If an "out of environment space" error occurs when starting and stopping the jakarta-tomcat-5.0.16 server in
+                     Win9X/ME-based operating systems, use the following method to create shortcuts for starting and stopping the server.
+         
+                     In Windows Explorer, right-click on the STARTUP.BAT and SHUTDOWN.BAT files located in the jakarta-tomcat\bin directory.  Click on
+                     "Properties" then on the "Memory" tab.  For the "Initial environment" field,
+                     enter  4096.
+            
+                     After you click apply, Windows will create shortcuts in the directory 
+                     which can be used to start and stop the server.  These shortcuts may be copied to the desktop.
+                     The original shortcuts and the Start Menu items for starting and stopping the server will not work.
+                 </li>
+
+            </ol>
+         <p>
+         
+         <p>
+         <strong><em>Third Party Components</em></strong> 
+         </p>
+        
+         <p>
+         The Sample RTE uses the following third party tools:
+         <p>
+         <ul>
+            <li>
+            <i><strong><em>jspSmartUpload</em></strong></i><br />
+            The jspSmartUpload classes are used to move PIFs to the RTE Server.
+            <br /><br />  
+          
+            <code> 
+               This code uses jpSmartUpload.
+               jspSmartUpload - Copyright (c) 2001 ADVANTYS. All rights reserved. 
+               "This product includes software developed by Advantys (http://www.advantys.com)."
+            </code>
+
+           <br /><br />
+            </li>
+            <li>
+            <i><strong><em>Morten's JavaScript Tree Menu</em></strong></i><br />
+            The Tree Menu is used when a course is running in <i>choice</i> mode.
+            The menu is presented in the left RTE frame
+            <br /><br />
+            
+            <code>  
+               Morten's JavaScript Tree Menu
+               version 2.3.0, dated 2001-04-30
+               http://www.treemenu.com/
+
+               Copyright (c) 2001, Morten Wang & contributors
+               All rights reserved.
+            </code>
+            
+            
+            <br /><br />
+            </li>
+            <li>
+         
+
+            This product includes software developed by the Apache Software
+            Foundation (
+            <a href="http://www.apache.org" target="_blank">
+               http://www.apache.org
+            </a>
+            )
+            <br /><br />&nbsp;<br />
+
+            Please read the Apache License Agreement below or view it at
+            <a target="_blank" href="http://xml.apache.org/LICENSE">
+               http://xml.apache.org/LICENSE
+            </a>
+            <br /><br />&nbsp;<br />
+            
+<!-- This code was copied directly from the Apache Web Site -->
+/*<br />
+* The Apache Software License, Version 1.1<br />
+*<br />
+*<br />
+* Copyright (c) 1999 The Apache Software Foundation.&nbsp; All rights <br />
+* reserved.<br />
+*<br />
+* Redistribution and use in source and binary forms, with or without<br />
+* modification, are permitted provided that the following conditions<br />
+* are met:<br />
+*<br />
+* 1. Redistributions of source code must retain the above copyright<br />
+*&nbsp;&nbsp;&nbsp;notice, this list of conditions and the following disclaimer.
+<br />
+*<br />
+* 2. Redistributions in binary form must reproduce the above copyright<br />
+*&nbsp;&nbsp;&nbsp; notice, this list of conditions and the following disclaimer
+in<br />
+*&nbsp;&nbsp;&nbsp; the documentation and/or other materials provided with the
+<br />
+*&nbsp;&nbsp;&nbsp; distribution.<br />
+*<br />
+* 3. The end-user documentation included with the redistribution,<br />
+*&nbsp;&nbsp;&nbsp; if any, must include the following acknowledgment:&nbsp;
+<br />
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "This product includes software developed
+by the<br />
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apache Software Foundation
+(http://www.apache.org/)."<br />
+*&nbsp;&nbsp;&nbsp; Alternately, this acknowledgment may appear in the software
+itself,<br />
+*&nbsp;&nbsp;&nbsp; if and wherever such third-party acknowledgments normally
+appear.<br />
+*<br />
+* 4. The names "Xerces" and "Apache Software Foundation" must<br />
+*&nbsp;&nbsp;&nbsp; not be used to endorse or promote products derived from this
+<br />
+*&nbsp;&nbsp;&nbsp; software without prior written permission. For written
+<br />
+*&nbsp;&nbsp;&nbsp; permission, please contact apache@apache.org.<br />
+*<br />
+* 5. Products derived from this software may not be called "Apache",<br />
+*&nbsp;&nbsp;&nbsp; nor may "Apache" appear in their name, without prior
+written<br />
+*&nbsp;&nbsp;&nbsp; permission of the Apache Software Foundation.<br />
+*<br />
+* THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED<br />
+* WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES<br />
+* OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br />
+* DISCLAIMED.&nbsp; IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR<br />
+* ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br />
+* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br />
+* LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF<br />
+* USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND<br />
+* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,<br />
+* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT<br />
+* OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br />
+* SUCH DAMAGE.<br />
+* ====================================================================<br />
+*<br />
+* This software consists of voluntary contributions made by many<br />
+* individuals on behalf of the Apache Software Foundation and was<br />
+* originally based on software copyright (c) 1999, International<br />
+* Business Machines, Inc., http://www.ibm.com.&nbsp; For more<br />
+* information on the Apache Software Foundation, please see<br />
+* <a href="http://www.apache.org/" target=_blank>http://www.apache.org/</a>
+</li>
+</ul>
+<br />
+
+</strong>
+
+      </td>
+   </tr>
+   <tr>
+   <td><hr>
+            <strong>
+            The Advanced Distributed Learning Co-Laboratory (ADL Co-Lab) grants
+            you ("Licensee") a non-exclusive, royalty free, license to use,
+            modify and redistribute this software in source and binary code
+            form, provided that i) this copyright notice and license appear on
+            all copies of the software; and ii) Licensee does not utilize the
+            software in a manner which is disparaging to ADL Co-Lab.
+            <br /><br />
+            This software is provided "AS IS," without a warranty of any kind.
+            &nbsp;ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND
+            WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT, ARE HEREBY
+            EXCLUDED.  ADL Co-Lab AND ITS LICENSORS SHALL NOT BE LIABLE FOR ANY
+            DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+            DISTRIBUTING THE SOFTWARE OR ITS DERIVATIVES. IN NO EVENT WILL ADL
+            Co-Lab OR ITS LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR
+            DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL OR
+            PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF
+            LIABILITY, ARISING OUT OF THE USE OF OR INABILITY TO USE SOFTWARE,
+            EVEN IF ADL Co-Lab  HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+            DAMAGES.
+            <br /><br />&nbsp;<br />
+            </strong>
+            <hr><br />
+            <p align="center"><a href="#top">Back to Top</a></p>
+         
+         </td>
+         </tr>
+   <!-- End Text Row -->
+</table>
+
+</body>
+</html>
+
+  
+  <!--- End Text Row --->
+</table>
+
+</body>
+</html>
+

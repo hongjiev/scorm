@@ -1,0 +1,104 @@
+<html>
+<!--
+/*******************************************************************************
+**
+** Filename: LMSLogin2.htm
+**
+** File Description: This page contains an HTML form that prompts the user 
+**                   for a username and password.  This page is displayed after
+**                   an unsuccessful login attempt.
+**
+** Author: ADL Technical Team
+**
+** Contract Number:
+** Company Name: CTC
+**
+** Module/Package Name:
+** Module/Package Description:
+**
+** Design Issues:
+**
+** Implementation Issues:
+** Known Problems:
+** Side Effects:
+**
+** References: ADL SCORM
+**
+/*******************************************************************************
+**
+** Concurrent Technologies Corporation (CTC) grants you ("Licensee") a non-
+** exclusive, royalty free, license to use, modify and redistribute this
+** software in source and binary code form, provided that i) this copyright
+** notice and license appear on all copies of the software; and ii) Licensee does
+** not utilize the software in a manner which is disparaging to CTC.
+**
+** This software is provided "AS IS," without a warranty of any kind.  ALL
+** EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY
+** IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-
+** INFRINGEMENT, ARE HEREBY EXCLUDED.  CTC AND ITS LICENSORS SHALL NOT BE LIABLE
+** FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+** DISTRIBUTING THE SOFTWARE OR ITS DERIVATIVES.  IN NO EVENT WILL CTC  OR ITS
+** LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA, OR FOR DIRECT,
+** INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER
+** CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE USE OF
+** OR INABILITY TO USE SOFTWARE, EVEN IF CTC  HAS BEEN ADVISED OF THE POSSIBILITY
+** OF SUCH DAMAGES.
+**
+*******************************************************************************/
+-->
+<head>
+<meta http-equiv="expires" content="Tue, 20 Aug 1999 01:00:00 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<title>ADL Sample RTE Login</title>
+<script language=javascript>
+
+/****************************************************************************
+**
+** Function:  submit1_onclick()
+** Input:   none
+** Output:  none
+**
+** Description:  This method checks to see if both text boxes, password and
+**               username have something populating them.
+**
+***************************************************************************/
+function submit1_onclick() 
+{
+   var username = new String(loginform.uname.value);
+   var password = new String(loginform.pwd.value);
+    
+   if (username == "" || password == "")
+   {
+      alert("you must enter a username and a password");
+      return false;
+   }
+   return true;
+}
+
+</script>
+</head>
+<body>
+   <font face="tahoma" size="2" color="Red"><b>
+      An invalid userid or password has been entered!
+   <br />
+      Please try again.
+   </b></font>
+    
+   <form action="LMSLogin.jsp" method="Get" id="loginform" name="loginform" 
+         onSubmit="return submit1_onclick()"> 
+      <br />
+      <label><font face="tahoma" size="2" color="purple"><b>
+         Username
+      </b></font></label>&nbsp;&nbsp;
+      <input type="text" id="uname" name="uname" value="">
+      <br />
+      <label><font face="tahoma" size="2" color="purple"><b>
+         Password
+      </b></font></label>&nbsp;&nbsp;
+      <input type="password" id="pwd" name="pwd" value="">
+      <br />
+      <br />
+      <input type="Submit" value="Submit" id="submit1" name="submit1">
+   </form>
+</body>
+</html>

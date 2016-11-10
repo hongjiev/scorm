@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest version="1.0"
+	identifier="com.bravais.cloudplayer.f4ad6404-139f-48bf-a13e-4b0030505e96"
+	xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+	http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+	http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+        
+            <lom xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://www.imsglobal.org/xsd/imsmd_rootv1p2p1' xsi:schemaLocation='http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd'><general><title><langstring xml:lang='x-none'>Xper Information Management System: Locating a Patient</langstring></title></general><lifecycle><version><langstring xml:lang='x-none'>1</langstring></version><status><source><langstring xml:lang='x-none'>LOMv1.0</langstring></source><value><langstring xml:lang='x-none'>Final</langstring></value></status></lifecycle><metametadata><metadatascheme>ADL SCORM 1.2</metadatascheme></metametadata><educational><typicallearningtime><datetime>PT0H0M0S</datetime></typicallearningtime></educational><rights><cost><source><langstring xml:lang='x-none'>LOMv1.0</langstring></source><value><langstring xml:lang='x-none'>yes</langstring></value></cost><copyrightandotherrestrictions><source><langstring xml:lang='x-none'>LOMv1.0</langstring></source><value><langstring xml:lang='x-none'>yes</langstring></value></copyrightandotherrestrictions></rights></lom>
+        
+    </metadata>
+    <organizations default="Main">
+        <organization identifier="Main" structure="hierarchical">
+            <title>Xper IM Locating a Patient</title>
+            <item identifier="JLSProxySCOCourse" isvisible="true" identifierref="JLSProxySCO">
+                <title>Xper IM Locating a Patient</title>
+                
+                    <adlcp:masteryscore>75</adlcp:masteryscore>
+                
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource adlcp:scormtype="sco" identifier="JLSProxySCO" type="webcontent" href="crs-lms.htm"/>
+    </resources>
+</manifest>
