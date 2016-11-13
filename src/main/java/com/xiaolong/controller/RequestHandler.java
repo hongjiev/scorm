@@ -1,9 +1,7 @@
 package com.xiaolong.controller;
 
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,44 +18,25 @@ import org.adl.samplerte.util.DBUtils;
 
 public class RequestHandler {
 
-	public static SCODataManager handleInit(String userId, String courseId, String scoId, HttpServletRequest request,
-			HttpServletResponse response) {
-
-		try {
-			String scoFile = request.getSession().getServletContext().getRealPath("/") + "/adl/" + userId + "/" + courseId + "/" + scoId;
-			
-			ObjectInputStream fileIn = new ObjectInputStream(new FileInputStream(scoFile));
-			SCODataManager scoData = (SCODataManager) fileIn.readObject();
-			scoData.getCore().setSessionTime("00:00:00.0");
-			fileIn.close();
-			return scoData;
-		} catch(Exception e) {
-		}
-		return null;
-	}
-
 	public static void handleCommit(String userId, String courseId, String scoId, SCODataManager inSCOData,
-			HttpServletRequest request, HttpServletResponse response)
-			throws IOException {
+			HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		HttpSession session = request.getSession();
 
 		boolean logoutFlag = false;
 
-		String lessonStatus;
-		String lessonExit;
-		String lessonEntry;
-
 		CMICore lmsCore = inSCOData.getCore();
 		if (lmsCore.getExit().getValue().equalsIgnoreCase("logout")) {
 			logoutFlag = true;
 		}
-		lessonStatus = lmsCore.getLessonStatus().getValue();
-		lessonExit = lmsCore.getExit().getValue();
-		lessonEntry = lmsCore.getEntry().getValue();
+		String lessonStatus = lmsCore.getLessonStatus().getValue();
+		String lessonExit = lmsCore.getExit().getValue();
+		String lessonEntry = lmsCore.getEntry().getValue();
+		// String lessonScore = lmsCore.getScore().getRaw().getValue();
+		// System.out.println("==score: " + lessonScore);
 
 		inSCOData.setCore(lmsCore);
-		
+
 		// Write out the updated data to disk
 		String scoFile = session.getServletContext().getRealPath("/") + "/adl/" + userId + "/" + courseId + "/" + scoId;
 
@@ -70,7 +49,7 @@ public class RequestHandler {
 		PreparedStatement stmtUpdateUserSCO;
 		PreparedStatement stmtSelectUserSCO;
 
-		String sqlUpdateUserSCO = "UPDATE UserSCOInfo SET LessonStatus = ?, `Exit` = ?, Entry = ?  WHERE UserID = ? AND CourseID = ? AND SCOID = ?";
+		String sqlUpdateUserSCO = "UPDATE UserSCOInfo SET LessonStatus = ?, `Exit` = ?, Entry = ? WHERE UserID = ? AND CourseID = ? AND SCOID = ?";
 
 		String sqlSelectUserSCO = "SELECT * FROM UserSCOInfo WHERE UserID = ? AND CourseID = ? AND SCOID = ?";
 		try {

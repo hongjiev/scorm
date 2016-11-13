@@ -1,6 +1,8 @@
 package com.xiaolong.controller;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,12 +15,20 @@ import org.adl.datamodels.cmi.CMIRequest;
 import org.adl.datamodels.cmi.CMITime;
 import org.adl.datamodels.cmi.DMErrorManager;
 import org.adl.samplerte.client.LMSErrorManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author iRobot
+ *
+ */
 @RestController
 @RequestMapping("")
 public class LMSController {
+
+	private static final Logger logger = LoggerFactory.getLogger(LMSController.class);
 
 	public static final String cmiBooleanFalse = "false";
 
@@ -28,9 +38,9 @@ public class LMSController {
 	public String LMSInitialize(String param, HttpSession session, HttpServletRequest request,
 			HttpServletResponse response) {
 
-		System.out.println("*********************");
-		System.out.println("In API::LMSInitialize");
-		System.out.println("*********************");
+		logger.debug("*********************");
+		logger.debug(">> LMSInitialize");
+		logger.debug("*********************");
 
 		String result = cmiBooleanFalse;
 
@@ -43,10 +53,9 @@ public class LMSController {
 			lmsErrorManager = (LMSErrorManager) session.getAttribute("lmsErrorManager");
 		}
 		SCODataManager scoData = null;
-		if (session.getAttribute("scoData") != null) {
-			scoData = (SCODataManager) session.getAttribute("scoData");
-		}
+
 		boolean isLMSInitialized = false;
+
 		if (session.getAttribute("isLMSInitialized") != null) {
 			isLMSInitialized = (boolean) session.getAttribute("isLMSInitialized");
 		}
@@ -56,26 +65,40 @@ public class LMSController {
 			lmsErrorManager.SetCurrentErrorCode("201");
 			return result;
 		}
-
 		if (isLMSInitialized) {
 			lmsErrorManager.SetCurrentErrorCode("101");
 		} else {
 			String userId = (String) session.getAttribute("USERID");
 			String courseId = (String) session.getAttribute("COURSEID");
 			String scoId = (String) session.getAttribute("SCOID");
-			
-			System.out.println("init [userId=" + userId + "],[courseId=" + courseId + "][scoId=" + scoId + "]");
 
-			scoData = RequestHandler.handleInit(userId, courseId, scoId, request, response);
+			logger.debug("init [userId=" + userId + "],[courseId=" + courseId + "][scoId=" + scoId + "]");
+
+			try {
+				String scoFile = request.getSession().getServletContext().getRealPath("/") + "/adl/" + userId + "/"
+						+ courseId + "/" + scoId;
+
+				ObjectInputStream fileIn = new ObjectInputStream(new FileInputStream(scoFile));
+				scoData = (SCODataManager) fileIn.readObject();
+				scoData.getCore().setSessionTime("00:00:00.0");
+				fileIn.close();
+			} catch (IOException e) {
+			} catch (ClassNotFoundException e) {
+			}
 			isLMSInitialized = true;
+			
+			// flush to session
+			session.setAttribute("dmErrorManager", dmErrorManager);
+			session.setAttribute("lmsErrorManager", lmsErrorManager);
+			session.setAttribute("scoData", scoData);
+			session.setAttribute("isLMSInitialized", isLMSInitialized);
 		}
-		// flush to session
-		session.setAttribute("dmErrorManager", dmErrorManager);
-		session.setAttribute("lmsErrorManager", lmsErrorManager);
-		session.setAttribute("scoData", scoData);
-		session.setAttribute("isLMSInitialized", isLMSInitialized);
 
 		result = cmiBooleanTrue;
+
+		logger.debug("*************************");
+		logger.debug("<< LMSInitialize result: " + result);
+		logger.debug("*************************");
 		return result;
 	}
 
@@ -83,9 +106,9 @@ public class LMSController {
 	public String LMSFinish(String param, HttpSession session, HttpServletRequest request,
 			HttpServletResponse response) {
 
-		System.out.println("*****************");
-		System.out.println("In API::LMSFinish");
-		System.out.println("*****************");
+		logger.debug("*****************");
+		logger.debug(">> LMSFinish");
+		logger.debug("*****************");
 
 		String result = cmiBooleanFalse;
 		String tempParm = String.valueOf(param);
@@ -100,16 +123,16 @@ public class LMSController {
 				// Need to add the SCOs Session Time into the running total time
 				CMITime totalTime = new CMITime(lmsCore.getTotalTime().getValue());
 
-				System.out.println("\tTotal time: " + totalTime.toString());
+				logger.debug("\tTotal time: " + totalTime.toString());
 
 				CMITime sessionTime = new CMITime(lmsCore.getSessionTime().getValue());
 
-				System.out.println("\tSession time: " + sessionTime.toString());
+				logger.debug("\tSession time: " + sessionTime.toString());
 
 				totalTime.add(sessionTime);
 				lmsCore.setTotalTime(totalTime.toString());
 
-				System.out.println("\t\tTotal time: " + totalTime.toString());
+				logger.debug("\t\tTotal time: " + totalTime.toString());
 
 				// If changes are left uncommitted when LMSFinish
 				// is called, the LMS forces an LMSCommit.
@@ -140,9 +163,10 @@ public class LMSController {
 	public String LMSCommit(String param, HttpSession session, HttpServletRequest request,
 			HttpServletResponse response) {
 
-		System.out.println("*****************");
-		System.out.println("In API::LMSCommit");
-		System.out.println("*****************");
+		logger.debug("*****************");
+		logger.debug(">> LMSCommit");
+		logger.debug(">> param: " + param);
+		logger.debug("*****************");
 
 		String result = cmiBooleanFalse;
 
@@ -170,54 +194,64 @@ public class LMSController {
 			setLmsErrorManager(session, "201");
 		}
 
+		logger.debug("***********************");
+		logger.debug("<< LMSCommit result: " + result);
+		logger.debug("***********************");
 		return result;
 	}
 
 	@RequestMapping("/LMSGetLastError")
 	public String LMSGetLastError(HttpSession session) {
 
-		System.out.println("***********************");
-		System.out.println("In API::LMSGetLastError");
-		System.out.println("***********************");
+		logger.debug("***********************");
+		logger.debug(">> LMSGetLastError");
+		logger.debug("***********************");
 
 		LMSErrorManager lmsErrorManager = (LMSErrorManager) session.getAttribute("lmsErrorManager");
+		String result = lmsErrorManager.GetCurrentErrorCode();
 
-		return lmsErrorManager.GetCurrentErrorCode();
+		logger.debug("<< LMSGetLastError result: " + result);
+		return result;
 	}
 
 	@RequestMapping("/LMSGetErrorString")
 	public String LMSGetErrorString(String errorCode, HttpSession session) {
 
-		System.out.println("*************************");
-		System.out.println("In API::LMSGetErrorString");
-		System.out.println("*************************");
-		System.out.println(">> errorCode: " + errorCode);
+		logger.debug("*************************");
+		logger.debug(">> LMSGetErrorString");
+		logger.debug(">> errorCode: " + errorCode);
+		logger.debug("*************************");
 
 		LMSErrorManager lmsErrorManager = (LMSErrorManager) session.getAttribute("lmsErrorManager");
+		String result = lmsErrorManager.GetErrorDescription(errorCode);
 
-		return lmsErrorManager.GetErrorDescription(errorCode);
+		logger.debug("<< LMSGetErrorString result: " + result);
+		return result;
 	}
 
 	@RequestMapping("/LMSGetDiagnostic")
 	public String LMSGetDiagnostic(String errorCode, HttpSession session) {
 
-		System.out.println("*************************");
-		System.out.println("In API::LMSGetDiagnostic ");
-		System.out.println("*************************");
-		System.out.println(">> errorCode: " + errorCode);
+		logger.debug("*************************");
+		logger.debug(">> LMSGetDiagnostic ");
+		logger.debug("*************************");
+		logger.debug(">> errorCode: " + errorCode);
 
 		LMSErrorManager lmsErrorManager = (LMSErrorManager) session.getAttribute("lmsErrorManager");
+		String result = lmsErrorManager.GetErrorDiagnostic(errorCode);
 
-		return lmsErrorManager.GetErrorDiagnostic(errorCode);
+		logger.debug("<< LMSGetDiagnostic result: " + result);
+
+		return result;
 	}
 
 	@RequestMapping("/LMSGetValue")
 	public String LMSGetValue(String element, HttpSession session) {
 
-		System.out.println("***********************");
-		System.out.println("In API::LMSGetValue    ");
-		System.out.println("***********************");
-		System.out.println(">> element: " + element);
+		logger.debug("***********************");
+		logger.debug(">> LMSGetValue    ");
+		logger.debug(">> element: " + element);
+		logger.debug("***********************");
 
 		String result = "";
 
@@ -225,7 +259,7 @@ public class LMSController {
 			return "";
 		} else {
 			CMIRequest request = new CMIRequest(element, true);
-			System.out.println("Looking for the element " + request.getRequest());
+			logger.debug("Looking for the element " + request.getRequest());
 			clearDMErrorCode(session);
 			clearLMSErrorCode(session);
 
@@ -241,6 +275,7 @@ public class LMSController {
 			session.setAttribute("scoData", scoData);
 			session.setAttribute("dmErrorManager", dmErrorManager);
 
+			logger.debug("<< LMSGetValue result: " + result);
 			return result;
 		}
 	}
@@ -248,11 +283,11 @@ public class LMSController {
 	@RequestMapping("/LMSSetValue")
 	public String LMSSetValue(String element, String value, HttpSession session) {
 
-		System.out.println("***********************");
-		System.out.println("In API::LMSSetValue    ");
-		System.out.println("***********************");
-		System.out.println(">> element: " + element);
-		System.out.println(">> value:   " + value);
+		logger.debug("***********************");
+		logger.debug(">> LMSSetValue    ");
+		logger.debug(">> element: " + element);
+		logger.debug(">> value:   " + value);
+		logger.debug("***********************");
 
 		String result = cmiBooleanFalse;
 
@@ -286,6 +321,8 @@ public class LMSController {
 				result = cmiBooleanTrue;
 			}
 		}
+
+		logger.debug("<< LMSSetValue result: " + result);
 		return result;
 	}
 
@@ -301,14 +338,18 @@ public class LMSController {
 
 	private void clearLMSErrorCode(HttpSession session) {
 		LMSErrorManager lmsErrorManager = (LMSErrorManager) session.getAttribute("lmsErrorManager");
-		lmsErrorManager.ClearCurrentErrorCode();
-		session.setAttribute("lmsErrorManager", lmsErrorManager);
+		if (lmsErrorManager != null) {
+			lmsErrorManager.ClearCurrentErrorCode();
+			session.setAttribute("lmsErrorManager", lmsErrorManager);
+		}
 	}
 
 	private void clearDMErrorCode(HttpSession session) {
 		DMErrorManager dmErrorManager = (DMErrorManager) session.getAttribute("dmErrorManager");
-		dmErrorManager.ClearCurrentErrorCode();
-		session.setAttribute("dmErrorManager", dmErrorManager);
+		if (dmErrorManager != null) {
+			dmErrorManager.ClearCurrentErrorCode();
+			session.setAttribute("dmErrorManager", dmErrorManager);
+		}
 	}
 
 	private SCODataManager getScoData(HttpSession session) {

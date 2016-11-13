@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+
+	<general>
+	   <title>
+	      <langstring>Conduct of Vessels in Sight of One Another</langstring>
+	   </title>
+	   <catalogentry>
+	      <catalog>ADL Sample Courses Catalog</catalog>
+	      <entry>
+	         <langstring>1000-01-03</langstring>
+	      </entry>
+	   </catalogentry>
+	   <language>en</language>
+	   <description>
+	      <langstring>Steering and Sailing Rules: Conduct of Vessels in Sight of One Another. Multi-vessel interactions and movement patterns and rules.</langstring>
+	   </description>
+	   <keyword>
+	      <langstring>Sailing</langstring>
+	   </keyword>
+	   <keyword>
+	      <langstring>Overtaking</langstring>
+	   </keyword>
+	   <keyword>
+	      <langstring>Head-on</langstring>
+	   </keyword>
+	   <keyword>
+	      <langstring>Crossing</langstring>
+	   </keyword>
+	   <aggregationlevel>
+         <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+         </source>
+         <value>
+            <langstring xml:lang="x-none">1</langstring>
+         </value>
+       </aggregationlevel>
+	</general>
+	
+	<lifecycle>
+	   <version>
+	      <langstring>1.1</langstring>
+	   </version>
+	   <status>
+         <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+         </source>
+         <value>
+            <langstring xml:lang="x-none">Final</langstring>
+         </value>
+	   </status>
+	   <contribute>
+	      <role>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Author</langstring>
+             </value>
+	      </role>
+	      <centity>
+	         <vcard>
+BEGIN:vCard
+ORG:ADL Co-Lab
+END:vCard
+	         </vcard>
+	      </centity>
+	      <date>
+	         <datetime>2000-01-27</datetime>
+	      </date>
+	   </contribute>
+	</lifecycle>
+	
+	<metametadata>
+	   <metadatascheme>ADL SCORM 1.2</metadatascheme>
+	</metametadata>
+	
+	<technical>
+	   <format>text/html</format>
+	   <size>9776</size>
+	   <location>Course01/Lesson01/sco03.htm</location>
+	   <requirement>
+	      <type>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Browser</langstring>
+             </value>
+	      </type>
+	      <name>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Microsoft Internet Explorer</langstring>
+             </value>
+	      </name>
+	      <minimumversion>5.0</minimumversion>
+	   </requirement>
+	</technical>
+	
+	<educational>
+	   <learningresourcetype>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">Narrative Text</langstring>
+          </value>
+	   </learningresourcetype>
+	   <typicallearningtime>
+	      <datetime>0000-00-00T00:12:00</datetime>
+	   </typicallearningtime>
+	</educational>
+	
+	<rights>
+	   <cost>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">no</langstring>
+          </value>
+	   </cost>
+	   <copyrightandotherrestrictions>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">no</langstring>
+          </value>
+	   </copyrightandotherrestrictions>
+	</rights>
+	
+	<classification>
+	   <purpose>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">Educational Objective</langstring>
+          </value>
+      </purpose>
+	   <description>
+         <langstring>This Sharable Content Object will give the student a basic understanding of the steering and sailing rules: conduct of vessels in sight of one another. Multi-vessel interactions and movement patterns and rules.</langstring>
+      </description>
+	   <keyword>
+	      <langstring>Maritime Navigation</langstring>
+	   </keyword>
+      <keyword>
+	      <langstring>steering and sailing rules</langstring>
+	   </keyword>
+      <keyword>
+	      <langstring>conduct of vessels in sight of one another</langstring>
+	   </keyword>
+      <keyword>
+	      <langstring>multi-vessel interactions</langstring>
+	   </keyword>
+      <keyword>
+	      <langstring>movement patterns and rules</langstring>
+	   </keyword>
+	</classification>
+
+</lom>

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+
+	<general>
+	   <title>
+	      <langstring>Lights and Shapes</langstring>
+	   </title>
+	   <catalogentry>
+	      <catalog>ADL Sample Courses Catalog</catalog>
+	      <entry>
+	         <langstring>1000-01-05</langstring>
+	      </entry>
+	   </catalogentry>
+	   <language>en</language>
+	   <description>
+	      <langstring>Lights and Shapes. Includes application, definitions, visibility and placement of lights.</langstring>
+	   </description>
+	   <keyword>
+	      <langstring>Vessel Lighting</langstring>
+	   </keyword>
+	   <aggregationlevel>
+         <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+         </source>
+         <value>
+            <langstring xml:lang="x-none">1</langstring>
+         </value>
+       </aggregationlevel>
+	</general>
+	
+	<lifecycle>
+	   <version>
+	      <langstring>1.1</langstring>
+	   </version>
+	   <status>
+         <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+         </source>
+         <value>
+            <langstring xml:lang="x-none">Final</langstring>
+         </value>
+	   </status>
+	   <contribute>
+	      <role>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Author</langstring>
+             </value>
+	      </role>
+	      <centity>
+	         <vcard>
+BEGIN:vCard
+ORG:ADL Co-Lab
+END:vCard
+	         </vcard>
+	      </centity>
+	      <date>
+	         <datetime>2000-01-27</datetime>
+	      </date>
+	   </contribute>
+	</lifecycle>
+	
+	<metametadata>
+	   <metadatascheme>ADL SCORM 1.2</metadatascheme>
+	</metametadata>
+	
+	<technical>
+	   <format>text/html</format>
+	   <size>33960</size>
+	   <location>Course01/Lesson01/sco05.htm</location>
+	   <requirement>
+	      <type>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Browser</langstring>
+             </value>
+	      </type>
+	      <name>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Microsoft Internet Explorer</langstring>
+             </value>
+	      </name>
+	      <minimumversion>5.0</minimumversion>
+	   </requirement>
+	</technical>
+	
+	<educational>
+	   <learningresourcetype>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">Narrative Text</langstring>
+          </value>
+	   </learningresourcetype>
+	   <typicallearningtime>
+	      <datetime>0000-00-00T00:25:00</datetime>
+	   </typicallearningtime>
+	</educational>
+	
+	<rights>
+	   <cost>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">no</langstring>
+          </value>
+	   </cost>
+	   <copyrightandotherrestrictions>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">no</langstring>
+          </value>
+	   </copyrightandotherrestrictions>
+	</rights>
+	
+	<classification>
+	   <purpose>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">Educational Objective</langstring>
+          </value>
+      </purpose>
+      <description>
+         <langstring>This Sharable Content Object will give the student a basic understanding of lights and shapes.</langstring>
+      </description>
+	  <keyword>
+	      <langstring>navigation lights</langstring>
+	   </keyword>
+      <keyword>
+	      <langstring>navigation shapes</langstring>
+	   </keyword>
+	</classification>
+
+</lom>

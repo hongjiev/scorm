@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+
+	<general>
+	   <title>
+	      <langstring>Navigation Lights while anchored</langstring>
+	   </title>
+	   <catalogentry>
+	      <catalog>ADL Sample Courses Catalog</catalog>
+	      <entry>
+	         <langstring>anchored.jpg</langstring>
+	      </entry>
+	   </catalogentry>
+	   <language>en</language>
+	   <description>
+	      <langstring>Vessel at anchor with deck illumination</langstring>
+	   </description>
+	   <keyword>
+	      <langstring>underway vessel</langstring>
+	   </keyword>
+	   <keyword>
+	      <langstring>navigation lights</langstring>
+	   </keyword>
+	   <keyword>
+	      <langstring>anchored</langstring>
+	   </keyword>
+       <aggregationlevel>
+         <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+         </source>
+         <value>
+            <langstring xml:lang="x-none">1</langstring>
+         </value>
+       </aggregationlevel>
+	</general>
+	
+	<lifecycle>
+	   <version>
+	      <langstring>1.1</langstring>
+	   </version>
+	   <status>
+         <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+         </source>
+         <value>
+            <langstring xml:lang="x-none">Final</langstring>
+         </value>
+	   </status>
+	   <contribute>
+	      <role>
+             <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+             </source>
+             <value>
+                <langstring xml:lang="x-none">Graphical Designer</langstring>
+             </value>
+	      </role>
+	      <centity>
+	         <vcard>
+BEGIN:vCard 
+ORG:ADL Co-Lab 
+END:vCard
+             </vcard>
+	      </centity>
+	      <date>
+	         <datetime>2000-01-27</datetime>
+	      </date>
+	   </contribute>
+	</lifecycle>
+	
+	<metametadata>
+	   <metadatascheme>ADL SCORM 1.2</metadatascheme>
+	</metametadata>
+	
+	<technical>
+	   <format>image/jpeg</format>
+	   <size>13843</size>
+	   <location>Course01/Lesson01/pics/anchored.jpg</location>
+	</technical>
+	
+	<educational>
+	   <learningresourcetype>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">Figure</langstring>
+          </value>
+	   </learningresourcetype>
+	</educational>
+	
+	<rights>
+	   <cost>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">no</langstring>
+          </value>
+	   </cost>
+	   <copyrightandotherrestrictions>
+          <source>
+             <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+             <langstring xml:lang="x-none">no</langstring>
+          </value>
+	   </copyrightandotherrestrictions>
+	   <description>
+	      <langstring>U.S. Coast Guard, Commandant Instruction M1667202C</langstring>
+	   </description>
+	</rights>
+
+</lom> 

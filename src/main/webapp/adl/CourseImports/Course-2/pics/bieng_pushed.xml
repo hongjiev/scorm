@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE record SYSTEM "http://www.imsproject.org/xml/IMS_METADATAv1p1.dtd">
+
+<record xmlns="http://www.imsproject.org/metadata/">
+
+      <metametadata>
+         <metadatascheme>ADL SCORM 1.1</metadatascheme>
+      </metametadata>
+
+      <general>
+        <title><langstring>Underway Lights while being pushed</langstring></title>
+        <catalogentry>
+          <catalogue>ADL Sample Courses Catalog</catalogue> 
+          <entry><langstring>bieng_pushed.jpg</langstring></entry>
+        </catalogentry>
+        <language>en</language>
+        <description>
+          <langstring>Vessel being pushed ahead, not being part of a composite unit</langstring>
+        </description>
+        <keywords><langstring>underway lights</langstring></keywords> 
+        <keywords><langstring>Power-driven vessel</langstring></keywords>
+        <keywords><langstring>navigation lights</langstring></keywords>
+        <keywords><langstring>being pushed</langstring></keywords> 
+        <keywords><langstring>composit</langstring></keywords>
+        <aggregationlevel>0</aggregationlevel>
+      </general>
+
+      <lifecycle>
+        <version><langstring>1.1</langstring></version>
+        <status><langstring>Final</langstring></status>
+        <contribute>
+          <role><langstring>Graphical Designer</langstring></role>
+          <centity>
+                <vcard>
+                        BEGIN:vCard 
+                        ORG:ADL Co-Lab
+                        END:vCard
+                </vcard>
+          </centity>
+          <date>
+                <datetime>2000-01-27</datetime>
+          </date>
+         </contribute>
+       </lifecycle>
+
+       <technical>
+         <format><langstring>image/jpeg</langstring></format>
+         <size>10406</size>
+         <location>Course01/Lesson01/pics/bieng_pushed.jpg</location>
+       </technical>
+
+       <educational>
+         <learningresourcetype><langstring>Figure</langstring></learningresourcetype>
+       </educational>
+
+       <rights>
+         <cost><langstring>no</langstring></cost> 
+         <copyrightandotherrestrictions><langstring>no</langstring></copyrightandotherrestrictions>
+         <description><langstring>U.S. Coast Guard, Commandant Instruction M1667202C</langstring></description>
+       </rights>
+
+</record>
