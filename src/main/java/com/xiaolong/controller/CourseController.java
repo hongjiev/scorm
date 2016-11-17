@@ -15,8 +15,8 @@ import java.util.zip.ZipFile;
 import javax.servlet.http.HttpSession;
 
 import org.adl.samplerte.server.LMSManifestHandler;
+//import org.adl.samplerte.server.LMSManifestHandler;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.xml.sax.InputSource;
 
-import com.xiaolong.utils.ManifestHandler;
 import com.xiaolong.utils.Utils;
 
 @Controller
@@ -62,23 +61,22 @@ public class CourseController {
 		}
 
 		// TODO
-//		String courseId = RandomStringUtils.randomAlphabetic(5);
-//		logger.info("courseId: {}", courseId);
-//
-//		ManifestHandler handler = new ManifestHandler();
-//		handler.setCourseId(courseId);
-//		handler.setCourseName(coursename);
-//		handler.setFileToParse(fileToParse);
-//		handler.setControl(controltype);
+		// String courseId = RandomStringUtils.randomAlphabetic(5);
+		// logger.info("courseId: {}", courseId);
+		// ManifestHandler handler = new ManifestHandler();
+		// handler.setCourseId(courseId);
+		// handler.setCourseName(coursename);
+		// handler.setFileToParse(fileToParse);
+		// handler.setControl(controltype);
+		// boolean result = handler.processManifest();
 
-		
 		LMSManifestHandler myManifestHandler = new LMSManifestHandler();
 		myManifestHandler.setCourseName(coursename);
 		myManifestHandler.setFileToParse(fileToParse);
 		myManifestHandler.setControl(controltype);
 		boolean result = myManifestHandler.processManifest();
 		String courseId = myManifestHandler.getCourseID();
-		
+
 		logger.info("handle manifest file result: " + result);
 
 		@SuppressWarnings("resource")
@@ -109,8 +107,9 @@ public class CourseController {
 				OutputStream outStream = new FileOutputStream(filename);
 
 				int count;
-				while ((count = in.read(buffer)) != -1)
+				while ((count = in.read(buffer)) != -1) {
 					outStream.write(buffer, 0, count);
+				}
 
 				in.close();
 				outStream.close();

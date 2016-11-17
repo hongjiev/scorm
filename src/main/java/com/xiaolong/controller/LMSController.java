@@ -63,6 +63,7 @@ public class LMSController {
 		String tempParm = String.valueOf(param);
 		if ((tempParm.equals("null") || tempParm.equals("")) != true) {
 			lmsErrorManager.SetCurrentErrorCode("201");
+			session.setAttribute("lmsErrorManager", lmsErrorManager);
 			return result;
 		}
 		if (isLMSInitialized) {

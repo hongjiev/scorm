@@ -1,31 +1,458 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest version="1.0"
-	identifier="com.bravais.cloudplayer.f4ad6404-139f-48bf-a13e-4b0030505e96"
-	xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
-	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
-	http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
-	http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
-    <metadata>
-        <schema>ADL SCORM</schema>
-        <schemaversion>1.2</schemaversion>
-        
-            <lom xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://www.imsglobal.org/xsd/imsmd_rootv1p2p1' xsi:schemaLocation='http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd'><general><title><langstring xml:lang='x-none'>Xper Information Management System: Locating a Patient</langstring></title></general><lifecycle><version><langstring xml:lang='x-none'>1</langstring></version><status><source><langstring xml:lang='x-none'>LOMv1.0</langstring></source><value><langstring xml:lang='x-none'>Final</langstring></value></status></lifecycle><metametadata><metadatascheme>ADL SCORM 1.2</metadatascheme></metametadata><educational><typicallearningtime><datetime>PT0H0M0S</datetime></typicallearningtime></educational><rights><cost><source><langstring xml:lang='x-none'>LOMv1.0</langstring></source><value><langstring xml:lang='x-none'>yes</langstring></value></cost><copyrightandotherrestrictions><source><langstring xml:lang='x-none'>LOMv1.0</langstring></source><value><langstring xml:lang='x-none'>yes</langstring></value></copyrightandotherrestrictions></rights></lom>
-        
-    </metadata>
-    <organizations default="Main">
-        <organization identifier="Main" structure="hierarchical">
-            <title>Xper IM Locating a Patient</title>
-            <item identifier="JLSProxySCOCourse" isvisible="true" identifierref="JLSProxySCO">
-                <title>Xper IM Locating a Patient</title>
-                
-                    <adlcp:masteryscore>75</adlcp:masteryscore>
-                
-            </item>
-        </organization>
+<?xml version="1.0"?>
+
+<manifest identifier="SingleSharableResource_MulitipleFileManifest" version="1.1" 
+   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+         http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+         http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+	
+   <metadata/>   
+
+   <organizations default="B0">
+       <organization identifier="B0">
+          <title>Maritime Navigation Course</title>          
+          <item identifier="B1">
+             <title>Maritime Navigation</title>
+             
+             <item identifier="S1" identifierref="sco_1">
+                <title>Inland Rules of the Road - Introduction</title>
+             
+                <item identifier="S2" identifierref="sco_2">
+                   <title>Steering and Sailing Rules 1</title>
+                </item>
+                <item identifier="S3" identifierref="sco_3">
+                   <title>Steering and Sailing Rules 2</title>
+                </item>
+                <item identifier="S4" identifierref="sco_4">
+                   <title>Steering and Sailing Rules 3</title>
+                </item>
+             </item>
+             <item identifier="S5" identifierref="sco_5">
+                <title>Lights and Shapes</title>
+             </item>
+             <item identifier="S6" identifierref="sco_6">
+                <title>Sound and Light Signals</title>
+             </item>           
+             <item identifier="S7" identifierref="sco_7">
+                <title>Exam</title>
+             </item>          
+          </item>
+          <metadata>            
+             <schema>ADL SCORM</schema>            
+             <schemaversion>1.2</schemaversion>            
+             <adlcp:location>Lesson01.xml</adlcp:location>         
+          </metadata>
+          
+       </organization>
+
     </organizations>
-    <resources>
-        <resource adlcp:scormtype="sco" identifier="JLSProxySCO" type="webcontent" href="crs-lms.htm"/>
-    </resources>
+   
+   <resources>      
+      <!-- **************************************************************
+      **   sco01  
+      *******************************************************************-->
+      <resource identifier="sco_1" type="webcontent" adlcp:scormtype="sco" href="sco01.htm">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco01.xml</adlcp:location>         
+         </metadata>         
+         <file href="sco01.htm"/>     
+         <dependency identifierref="wrapper" />
+         <dependency identifierref="functions" />        
+      </resource>    
+      <!-- **************************************************************
+      **   sco02  
+      *******************************************************************-->
+      <resource identifier="sco_2" type="webcontent" adlcp:scormtype="sco" href="sco02.htm">         
+         <metadata>           
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco02.xml</adlcp:location>         
+         </metadata>
+         <file href="sco02.htm"/>             
+      </resource>  
+      <!-- **************************************************************
+      **   sco03  
+      *******************************************************************-->
+      <resource identifier="sco_3" type="webcontent" adlcp:scormtype="sco" href="sco03.htm">         
+         <metadata>            
+            <schema>ADL SCORM</schema>           
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco03.xml</adlcp:location>         
+         </metadata>         
+         <file href="sco03.htm"/>     
+         <dependency identifierref="wrapper" />
+         <dependency identifierref="functions" />        
+      </resource>  
+      <!-- **************************************************************
+      **   sco04  
+      *******************************************************************-->
+      <resource identifier="sco_4" type="webcontent" adlcp:scormtype="sco" href="sco04.htm">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco04.xml</adlcp:location>         
+         </metadata>         
+         <file href="sco04.htm"/>     
+         <dependency identifierref="wrapper" />
+         <dependency identifierref="functions" />        
+      </resource>      
+      <!-- **************************************************************
+      **   sco05 and the jpeg assets that are dependencies of sco05 
+      *******************************************************************-->
+      <resource identifier="sco_5" type="webcontent" adlcp:scormtype="sco" href="sco05.htm">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco05.xml</adlcp:location>         
+         </metadata>         
+         <file href="sco05.htm"/>     
+         <dependency identifierref="wrapper" />
+         <dependency identifierref="functions" />
+         <dependency identifierref="underway_lights_big" />
+         <dependency identifierref="underway_lights_small" />
+         <dependency identifierref="underway_lights_hover" />
+         <dependency identifierref="underway_lights_boat" />
+         <dependency identifierref="underway_lights_GL" />
+         <dependency identifierref="tow_astern" />
+         <dependency identifierref="pushing_composite" />
+         <dependency identifierref="tow_alongside" />
+         <dependency identifierref="tow_astern_small" />
+         <dependency identifierref="being_pushed" />
+         <dependency identifierref="being_towed_alongside" />
+         <dependency identifierref="pushing_west" />
+         <dependency identifierref="sailing_underway" />
+         <dependency identifierref="row_underway" />
+         <dependency identifierref="sail_prop" />
+         <dependency identifierref="trawling" />
+         <dependency identifierref="trawling_underway" />
+         <dependency identifierref="fishing" />
+         <dependency identifierref="not_under_command_making_way" />
+         <dependency identifierref="restricted_maneuvering_small" />
+         <dependency identifierref="restricted_maneuvering_tow" />
+         <dependency identifierref="dredging" />
+         <dependency identifierref="diving_small" />
+         <dependency identifierref="mine_clearing" />
+         <dependency identifierref="duty_pilot" />
+         <dependency identifierref="anchored" />
+         <dependency identifierref="aground" />        
+      </resource>  
+      <resource identifier="underway_lights_big" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/underway_lights_big.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/underway_lights_big.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/underway_lights_big.jpg"/>
+      </resource>
+      <resource identifier="underway_lights_small" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/underway_lights_small.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/underway_lights_small.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/underway_lights_small.jpg"/>
+      </resource>
+      <resource identifier="underway_lights_hover" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/underway_lights_hover.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/underway_lights_hover.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/underway_lights_hover.jpg"/>
+      </resource>
+      <resource identifier="underway_lights_boat" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/underway_lights_boat.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/underway_lights_boat.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/underway_lights_boat.jpg"/>
+      </resource>
+      <resource identifier="underway_lights_GL" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/underway_lights_GL.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/underway_lights_GL.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/underway_lights_GL.jpg"/>
+      </resource>
+      <resource identifier="tow_astern" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/tow_astern.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/tow_astern.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/tow_astern.jpg"/>
+      </resource>
+      <resource identifier="pushing_composite" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/pushing_composite.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/pushing_composite.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/pushing_composite.jpg"/>
+      </resource>
+      <resource identifier="tow_alongside" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/tow_alongside.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/tow_alongside.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/tow_alongside.jpg"/>
+      </resource>
+      <resource identifier="tow_astern_small" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/tow_astern_small.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/tow_astern_small.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/tow_astern_small.jpg"/>
+      </resource>
+      <resource identifier="being_pushed" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/being_pushed.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/being_pushed.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/being_pushed.jpg"/>
+      </resource>
+      <resource identifier="being_towed_alongside" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/being_towed_alongside.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/being_towed_alongside.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/being_towed_alongside.jpg"/>
+      </resource>
+      <resource identifier="pushing_west" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/pushing_west.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/pushing_west.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/pushing_west.jpg"/>
+      </resource>
+      <resource identifier="sailing_underway" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/sailing_underway.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/sailing_underway.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/sailing_underway.jpg"/>
+      </resource>
+      <resource identifier="row_underway" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/row_underway.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/row_underway.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/row_underway.jpg"/>
+      </resource>
+      <resource identifier="sail_prop" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/sail_prop.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/sail_prop.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/sail_prop.jpg"/>
+      </resource>
+      <resource identifier="trawling" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/trawling.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/trawling.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/trawling.jpg"/>
+      </resource>
+      <resource identifier="trawling_underway" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/trawling_underway.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/trawling_underway.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/trawling_underway.jpg"/>
+      </resource>
+      <resource identifier="fishing" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/fishing.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/fishing.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/fishing.jpg"/>
+      </resource>
+      <resource identifier="not_under_command_making_way" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/not_under_command_making_way.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/not_under_command_making_way.xml</adlcp:location>         
+         </metadata>           
+         <file href="pics/not_under_command_making_way.jpg"/>
+      </resource>
+      <resource identifier="restricted_maneuvering_small" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/restricted_maneuvering_small.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/restricted_maneuvering_small.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/restricted_maneuvering_small.jpg"/>
+      </resource>
+      <resource identifier="restricted_maneuvering_tow" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/restricted_maneuvering_tow.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/restricted_maneuvering_tow.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/restricted_maneuvering_tow.jpg"/>
+      </resource>
+      <resource identifier="dredging" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/dredging.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/dredging.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/dredging.jpg"/>
+      </resource>
+      <resource identifier="diving_small" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/diving_small.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/diving_small.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/diving_small.jpg"/>
+      </resource>
+      <resource identifier="mine_clearing" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/mine_clearing.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/mine_clearing.xml</adlcp:location>         
+         </metadata>           
+         <file href="pics/mine_clearing.jpg"/>
+      </resource>
+      <resource identifier="duty_pilot" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/duty_pilot.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/duty_pilot.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/duty_pilot.jpg"/>
+      </resource>
+      <resource identifier="anchored" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/anchored.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/anchored.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/anchored.jpg"/>
+      </resource>
+      <resource identifier="aground" type="webcontent" 
+                adlcp:scormtype="asset" href="pics/aground.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/aground.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/aground.jpg"/>
+      </resource>
+      
+      <!-- **************************************************************
+      **   sco06 and the jpeg assets that are dependencies of sco06  
+      *******************************************************************-->
+      <resource identifier="sco_6" type="webcontent" adlcp:scormtype="sco" href="sco06.htm">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco06.xml</adlcp:location>         
+         </metadata>         
+         <file href="sco06.htm"/>     
+         <dependency identifierref="nav_aids" />
+         <dependency identifierref="distress_add" />
+         <dependency identifierref="distress" />   
+         <dependency identifierref="wrapper" />
+         <dependency identifierref="functions" />      
+      </resource>     
+      <resource identifier="nav_aids" type="webcontent" adlcp:scormtype="asset" href="pics/nav_aids.jpg">
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/nav_aids.xml</adlcp:location>         
+         </metadata>         
+         <file href="pics/nav_aids.jpg"/>
+      </resource>
+      <resource identifier="distress_add" type="webcontent" adlcp:scormtype="asset" 
+                href="pics/distress_sigs_add.jpg">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/distress_sigs_add.xml</adlcp:location>         
+         </metadata>         
+         <file href = "pics/distress_sigs_add.jpg"/>
+      </resource>
+      <resource identifier="distress" type="webcontent" adlcp:scormtype="asset" 
+                href="pics/distress_sigs.jpg">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>pics/distress_sigs.xml</adlcp:location>         
+         </metadata>         
+         <file href = "pics/distress_sigs.jpg"/>
+      </resource>
+  
+      <!-- **************************************************************
+      **   sco07  
+      *******************************************************************-->
+      <resource identifier="sco_7" type="webcontent" adlcp:scormtype="sco" href="sco07.htm">         
+         <metadata>            
+            <schema>ADL SCORM</schema>            
+            <schemaversion>1.2</schemaversion>            
+            <adlcp:location>sco07.xml</adlcp:location>         
+         </metadata>         
+         <file href="sco07.htm"/>   
+         <dependency identifierref="wrapper" />
+         <dependency identifierref="functions" />      
+      </resource>     
+     
+      
+      <!--  ****************************************************************
+      **    The wrapper and sco functions javascript files 
+      **********************************************************************-->
+      <resource identifier="wrapper" type="webcontent" adlcp:scormtype="asset" 
+                href="util/APIWrapper.js">         
+         <file href="util/APIWrapper.js"/>
+      </resource>
+      <resource identifier="functions" type="webcontent" adlcp:scormtype="asset" 
+                href="util/SCOFunctions.js">         
+         <file href="util/SCOFunctions.js"/>
+      </resource>
+      
+   </resources>
 </manifest>
